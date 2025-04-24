@@ -39,7 +39,7 @@ public class BulkheadRateLimitAutoConfiguration {
 			@Lazy MeterRegistry meterRegistry) {
 		return new BulkheadRateLimitMetrics(registry, meterRegistry);
 	}
-trr
+
 	@Bean
 	@ConditionalOnMissingBean
 	public BulkheadRateLimitManager bulkheadRateLimitManager(

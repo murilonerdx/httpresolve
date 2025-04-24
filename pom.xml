@@ -14,7 +14,7 @@
     <name>http-resolve</name>
     <description>Biblioteca para gerenciar rate limit e bulkhead em aplicações Spring Boot</description>
 
-    <url>https://github.com/seu-usuario/http-resolve</url>
+    <url>https://github.com/murilonerdx/httpresolve</url>
 
     <licenses>
         <license>
