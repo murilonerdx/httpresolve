@@ -1,10 +1,10 @@
-# http-resolve: Starter de Bulkhead e Rate Limiting para Spring Boot
+# httpresolve: Starter de Bulkhead e Rate Limiting para Spring Boot
 
 [![GitHub Version](https://img.shields.io/github/v/tag/murilonerdx/httpresolve?label=Release)](https://github.com/murilonerdx/httpresolve/tags)
 [![GitHub License](https://img.shields.io/github/license/murilonerdx/httpresolve)](https://github.com/murilonerdx/httpresolve/blob/main/LICENSE)
 [![JitPack](https://jitpack.io/v/murilonerdx/httpresolve.svg)](https://jitpack.io/#murilonerdx/httpresolve)
 
-**http-resolve** é uma biblioteca (Spring Boot Starter) para proteger seus sistemas Java contra sobrecarga e abuso, oferecendo mecanismos robustos de **Bulkhead (barreira de contenção)** e **Rate Limiting (limitação de taxa)**.  
+**httpresolve** é uma biblioteca (Spring Boot Starter) para proteger seus sistemas Java contra sobrecarga e abuso, oferecendo mecanismos robustos de **Bulkhead (barreira de contenção)** e **Rate Limiting (limitação de taxa)**.  
 Ideal para microsserviços, APIs públicas, gateways e sistemas de missão crítica.
 
 ---
