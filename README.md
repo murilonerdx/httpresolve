@@ -100,7 +100,7 @@ public class DemoController {
 
 ⚙️ Propriedades de Configuração
 
-```yml
+```
 bulkhead-rate-limit.enabled	boolean	Habilita/desabilita o starter	true
 bulkhead-rate-limit.metrics-enabled	boolean	Habilita integração com Micrometer/Actuator	true
 bulkhead-rate-limit.default-policy	string	Nome da política padrão	default
@@ -110,6 +110,7 @@ bulkhead-rate-limit.policies.[nome].bulkhead.queue-timeout	duração	Timeout na 
 bulkhead-rate-limit.policies.[nome].rate-limit.limit	int	Chamadas por janela	5
 bulkhead-rate-limit.policies.[nome].rate-limit.window	duração	Duração da janela (ex: 1s, 10s, 2m)	10s
 ```
+
 🔍 Métricas
 Se usar Spring Boot Actuator + Micrometer, esta biblioteca expõe as seguintes métricas por política:
 ```
