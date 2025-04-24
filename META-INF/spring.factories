@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.murilo_pereira.httpresolve.autoconfigure.BulkheadRateLimitAutoConfiguration
