@@ -73,6 +73,7 @@ bulkhead-rate-limit:
    import com.murilo_pereira.httpresolve.annotation.BulkheadRateLimit;
 
 ```java
+@EnableBulkheadRateLimit
 @RestController
 @RequestMapping("/demo")
 public class DemoController {
