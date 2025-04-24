@@ -33,9 +33,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/murilonerdx/http-resolve.git</connection>
-        <developerConnection>scm:git:ssh://github.com:murilonerdx/http-resolve.git</developerConnection>
-        <url>https://github.com/seu-usuario/http-resolve/tree/master</url>
+        <connection>scm:git:git://github.com/murilonerdx/httpresolve.git</connection>
+        <developerConnection>scm:git:ssh://github.com/murilonerdx/httpresolve.git</developerConnection>
+        <url>https://github.com/murilonerdx/httpresolve/tree/main</url>
     </scm>
 
     <properties>
