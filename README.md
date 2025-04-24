@@ -1,4 +1,4 @@
-# httpresolve: Starter de Bulkhead e Rate Limiting para Spring Boot
+#  Starter de Bulkhead e Rate Limiting para Spring Boot
 
 [![GitHub Version](https://img.shields.io/github/v/tag/murilonerdx/httpresolve?label=Release)](https://github.com/murilonerdx/httpresolve/tags)
 [![GitHub License](https://img.shields.io/github/license/murilonerdx/httpresolve)](https://github.com/murilonerdx/httpresolve/blob/main/LICENSE)
