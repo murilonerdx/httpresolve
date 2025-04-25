@@ -1,0 +1,19 @@
+bulkhead-rate-limit:
+  enabled: true
+  metrics-enabled: true
+  default-policy: default
+  policies:
+    default:
+      bulkhead:
+        max-concurrent-calls: 100     # Mantém 100 simultâneas
+        max-queue-size: 20           # Mantém 500 na fila
+        queue-timeout: 2000ms        # Aumenta para 10 segundos (crucial)
+      rate-limit:
+        limit: 600                 # Mantém 1000 por janela
+        window: 1000ms                # Mantém 5 segundos de janela
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
