@@ -23,21 +23,24 @@ public class FixedWindowRateLimitStrategy implements RateLimitStrategy {
 	}
 
 	@Override
-	public synchronized void consumePermission() throws RateLimitException {
+	public void consumePermission() throws RateLimitException {
 		long now = System.currentTimeMillis();
-		long windowStart = windowStartTime.get();
-
-		// Check if we need to reset the window
-		if (now - windowStart > windowMillis) {
-			windowStartTime.set(now);
-			counter.set(0);
-		}
-
-		// Check if rate limit is reached
-		if (counter.incrementAndGet() > limit) {
-			throw new RateLimitException("Rate limit exceeded");
+		while (true) {
+			long windowStart = windowStartTime.get();
+			if (now - windowStart > windowMillis) {
+				if (windowStartTime.compareAndSet(windowStart, now)) {
+					counter.set(0);
+				}
+				continue;
+			}
+			int current = counter.incrementAndGet();
+			if (current > limit) {
+				throw new RateLimitException("Rate limit exceeded");
+			}
+			break;
 		}
 	}
+
 
 	@Override
 	public RateLimitMetrics getMetrics() {

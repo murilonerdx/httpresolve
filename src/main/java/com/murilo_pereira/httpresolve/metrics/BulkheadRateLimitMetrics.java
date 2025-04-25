@@ -8,7 +8,6 @@ import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -179,12 +178,4 @@ public class BulkheadRateLimitMetrics {
 		}
 	}
 
-	/**
-	 * Common tags for metrics
-	 */
-	@Bean
-	@ConditionalOnClass(name = "org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer")
-	public MeterRegistryCustomizer<MeterRegistry> metricsCommonTags() {
-		return registry -> registry.config().commonTags("component", "bulkhead-rate-limit");
-	}
 }
